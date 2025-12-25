@@ -68,7 +68,7 @@ export default function InvoicePreviewPage() {
         </button>
 
         <button
-          className="px-4 py-2 rounded-lg border"
+          className="px-4 py-2 rounded-lg border bg-white text-black transition-colors duration-200 hover:bg-sky-200 hover:border-sky-300 hover:text-sky-950 hover:shadow-sm active:scale-[0.99]"
           onClick={() => {
             // Adds a blank line item
             setInvoice({
@@ -118,14 +118,6 @@ export default function InvoicePreviewPage() {
 
         {/* Invoice meta */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <input
-            className="border rounded-lg p-2"
-            value={invoice.invoiceNumber}
-            onChange={(e) =>
-              setInvoice({ ...invoice, invoiceNumber: e.target.value })
-            }
-            placeholder="Invoice number"
-          />
           <input
             className="border rounded-lg p-2"
             value={invoice.issueDate}
